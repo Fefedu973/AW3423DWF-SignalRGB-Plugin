@@ -4,6 +4,7 @@ export function ProductId() { return 0x100e; }
 export function Publisher() { return "Fefe_du_973"; }
 export function Size() { return [80, 35]; }
 export function DefaultPosition() { return [10, 100]; }
+export function Type() { return "hybrid"; }
 export function DefaultScale() { return 2.0; }
 
 export function ControllableParameters() {
@@ -45,14 +46,12 @@ export function Render() {
 export function Shutdown(SystemSuspending) {
 
 	if (SystemSuspending) {
-		sendColors("#000000"); // Go Dark on System Sleep/Shutdown
+		sendColors("#000000");
 	} else {
 		sendColors(shutdownColor);
 	}
 
 }
-
-export function Type() { return "hybrid"; }
 
 function sendColors(overrideColor) {
 
@@ -64,16 +63,15 @@ function sendColors(overrideColor) {
 			pre_packet1[1] = 0x40;
 			pre_packet1[2] = 0xe1;
 			pre_packet1[3] = 0x01;
-		
+
 			device.write(pre_packet1, 192);
 
 			let returnPacket = device.control_transfer(0xA1, 0x01, 0x0100, 0x00, [], 192, 1000);
 
-	
 			returnPacket = returnPacket.slice(0, 16);
-	
-			const key = gen_key(returnPacket, 7);
-	
+
+			const key = gen_key(returnPacket);
+
 			const login_packet = new Array(192).fill(0x00);
 			login_packet[1] = 0x40;
 			login_packet[2] = 0xe1;
@@ -86,8 +84,7 @@ function sendColors(overrideColor) {
 			login_packet[70] = key[5];
 			login_packet[71] = key[6];
 			login_packet[72] = key[7];
-	
-	
+
 			device.write(login_packet, 192);
 
 			const packet = new Array(192).fill(0x00);
@@ -101,24 +98,18 @@ function sendColors(overrideColor) {
 			packet[67] = 0xd0;
 			packet[68] = 0x04;
 
-
 			const iPxX = vLedPositions[idx][0];
 			const iPxY = vLedPositions[idx][1];
 			let iLed;
-			let iLed2;
 
 			if (idx == 0) {
 				iLed = 0x01;
-				iLed2 = 0xf6;
 
 			} else if (idx == 1) {
 				iLed = 0x02;
-				iLed2 = 0xf5;
 
 			} else if (idx == 2) {
 				iLed = 0x08;
-				iLed2 = 0xff;
-
 			}
 			var color;
 
@@ -134,24 +125,27 @@ function sendColors(overrideColor) {
 			packet[71] = color[1];
 			packet[72] = color[2];
 			packet[73] = 0x64;
-			packet[74] = iLed2;
+			packet[74] = 0x51 ^ 0x87 ^ 0xd0 ^ 0x04 ^ iLed ^ color[0] ^ color[1] ^ color[2] ^ 0x64;
 
 			device.write(packet, 192);
+			device.pause(200);
 		}
+
+
 	} else {
 
 		const pre_packet1 = new Array(192).fill(0x00);
 		pre_packet1[1] = 0x40;
 		pre_packet1[2] = 0xe1;
 		pre_packet1[3] = 0x01;
-	
+
 		device.write(pre_packet1, 192);
 
 		let returnPacket = device.control_transfer(0xA1, 0x01, 0x0100, 0x00, [], 192, 1000);
 
 		returnPacket = returnPacket.slice(0, 16);
 
-		const key = gen_key(returnPacket, 7);
+		const key = gen_key(returnPacket);
 
 		const login_packet = new Array(192).fill(0x00);
 		login_packet[1] = 0x40;
@@ -166,9 +160,7 @@ function sendColors(overrideColor) {
 		login_packet[71] = key[6];
 		login_packet[72] = key[7];
 
-
 		device.write(login_packet, 192);
-
 
 		const packet = new Array(192).fill(0x00);
 		packet[1] = 0x40;
@@ -197,51 +189,66 @@ function sendColors(overrideColor) {
 		packet[71] = color[1];
 		packet[72] = color[2];
 		packet[73] = 0x64;
-		packet[74] = 0xfc;
+		packet[74] = 0x6e ^ 0x0b ^ color[0] ^ color[1] ^ color[2] ^ 0x64;
 
 		device.write(packet, 192);
 
 	}
 }
 
-function gen_key(in_buffer, oem_key_idx) {
-	var oem_keys = [
-		new Uint8Array([0x18, 0x18, 0x49, 0x49, 0x1b, 0x1b, 0x6b, 0x26, 0x73, 0x00, 0x1b, 0x70, 0x35, 0x3d, 0x3d, 0xa1]),
-		new Uint8Array([0x8f, 0x8f, 0x64, 0xe9, 0x9c, 0x7c, 0x08, 0xd5, 0xaa, 0xd1, 0x43, 0x45, 0x79, 0x79, 0x79]),
-		new Uint8Array([0x41, 0x6b, 0x56, 0xcd, 0xc9, 0x83, 0x4c, 0x5a, 0x94, 0xdc, 0xaf, 0x01, 0xba, 0x80, 0x6d, 0x38, 0xdf, 0xc2, 0xeb]),
-		new Uint8Array([0x6f, 0x45, 0x23, 0xb8, 0xbc, 0xf6, 0x43, 0x8d, 0x6e, 0x9b, 0xe8, 0x46, 0x38, 0x58, 0x6a, 0x67, 0x4d]),
-		new Uint8Array([0x46, 0xc1, 0x47, 0xe8, 0x5d, 0xad, 0x3e, 0x2d, 0x72, 0x64, 0x3f, 0xe5, 0xb3, 0xdc, 0x21, 0x6c, 0xb9, 0xac, 0xed]),
-		new Uint8Array([0x74, 0x95, 0xe6, 0x20, 0xb0, 0x10, 0x7b, 0xd0, 0x4d, 0x19, 0x92, 0xa4, 0xf3, 0x8e, 0x1b]),
-		new Uint8Array([0xd0, 0x65, 0x8d, 0xad, 0x3c, 0xe8, 0x68, 0x6c, 0x38, 0xa6, 0xfb, 0xee, 0xcf, 0x2e, 0x50, 0x50, 0x25, 0x71]),
-		new Uint8Array([0xf5, 0x3f, 0xc1, 0x39, 0x44, 0x3a, 0x31, 0x79, 0x0d, 0xb1, 0x82, 0x76]),
-		new Uint8Array([0x95, 0xed, 0xcb, 0xb8, 0x9a, 0x5b, 0x27, 0x95, 0xfd, 0x02, 0x99, 0x62, 0x82, 0xa9, 0xbf]),
-	];
-	var sk_idx = 0, ok_idx = 0;
-	var syn_key = new Array(8).fill(0);
-	var oem_key = Array.from(oem_keys[oem_key_idx]);
-	while (ok_idx < oem_key.length) {
-		var ok_sub_len = (oem_key[ok_idx] & 1) + ((oem_key[ok_idx] & 0b10000) >> 4);
-		for (var i = 0; i < ok_sub_len; i++) {
-			if (sk_idx == 8) {
-				break;
-			}
+function gen_key(response) {
+	// Use fixed OEM key from C++ integration
+	const oem_key = [0xf5, 0x3f, 0xc1, 0x39, 0x44, 0x3a, 0x31, 0x79, 0x0d, 0xb1, 0x82, 0x76];
+	let syn_key = new Array(8).fill(0);
+	let sk_idx = 0, ok_idx = 0;
+
+	while (ok_idx < oem_key.length && sk_idx < 8) {
+		let ok_sub_len = (oem_key[ok_idx] & 1) + ((oem_key[ok_idx] & 0x10) >> 4);
+		for (let i = 0; i < ok_sub_len && sk_idx < 8; i++) {
 			syn_key[sk_idx] = oem_key[ok_idx + 1] ^ oem_key[ok_idx];
-			ok_idx += 1;
-			sk_idx += 1;
+			ok_idx++;
+			sk_idx++;
 		}
-		ok_idx += 1;
+		ok_idx++;
 	}
-	var v15 = in_buffer[15] | (in_buffer[0] << 8);
-	if (v15.toString(2).split('1').length - 1 % 2 != 0) {
-		var out_buffer = in_buffer.slice(0, 8);
-		var idx = in_buffer[14] & 0b111;
-		out_buffer[idx] ^= in_buffer[idx + 8];
+
+	let out_buffer = [];
+	if (response.length < 16) {
+		return syn_key; // fallback if response is too short
+	}
+
+	// Compute v15 as in C++: (response[0] << 8) | response[15]
+	let v15 = (response[0] << 8) | response[15];
+	const ones = v15.toString(2).split("0").join("").length;
+	const parity_odd = (ones % 2) !== 0;
+
+	if (parity_odd) {
+		// Use first 8 bytes of response
+		const len = Math.min(8, response.length);
+		out_buffer = response.slice(0, len);
+		if (response.length > 14) {
+			let idx = response[14] & 0x07;
+			if (idx + 8 < response.length) {
+				out_buffer[idx] ^= response[idx + 8];
+			}
+		}
 	} else {
-		var out_buffer = in_buffer.slice(8);
-		var idx = in_buffer[6] & 0b111;
-		out_buffer[idx] ^= in_buffer[idx];
+		// Use bytes 8 to 15 of response
+		const start = Math.min(8, response.length);
+		const end = Math.min(start + 8, response.length);
+		out_buffer = response.slice(start, end);
+		if (response.length > 6) {
+			let idx = response[6] & 0x07;
+			if (idx < response.length) {
+				out_buffer[idx] ^= response[idx];
+			}
+		}
 	}
-	return syn_key.map(function (x, i) { return x ^ out_buffer[i]; });
+
+	for (let i = 0; i < 8 && i < out_buffer.length; i++) {
+		syn_key[i] ^= out_buffer[i];
+	}
+	return syn_key;
 }
 
 function hexToRgb(hex) {
