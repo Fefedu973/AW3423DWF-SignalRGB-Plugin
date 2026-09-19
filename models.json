@@ -1,0 +1,3897 @@
+{
+  "schema_version": 1,
+  "as_of": "2026-09-19",
+  "scope": "Union of both historical inventories, all installed AWCC display metadata, verified official Dell pages/manuals and catalog additions. This includes non-RGB and unknown models for coverage; no undocumented model or PID range inferred.",
+  "auth_definition": "true/false/null means current AWCC OEM challenge-response enabled/disabled/unknown, not hardware security capability or vendor intent.",
+  "controller_definition": "AWCC software controller class is evidence of transport selection; not physical chip die identification.",
+  "report_length_definition": "USB wire payload excluding synthetic HID API report-ID byte. hid_api_buffer_length includes that byte. Native AWCC control path does not prepend it.",
+  "models": [
+    {
+      "model": "AW2518H",
+      "vid": "0x0424",
+      "pid": "0x274C",
+      "controller": "legacy USB bridge (physical chip unverified)",
+      "protocol_family": "legacy_92_48",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "upstream_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Back Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        }
+      ],
+      "zone_mask_all": 1,
+      "report_length": 64,
+      "checksum": "No checksum emitted in public Gen1 color command",
+      "support_status": "upstream_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "upstream_source",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!2:2"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!5:5"
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen1_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 2,
+          "values": {
+            "A2": "Alienware 25 Gaming Monitor AW2518H",
+            "B2": "✔️",
+            "C2": "✔️",
+            "D2": "❌",
+            "E2": "V1",
+            "F2": "❌",
+            "G2": "❌",
+            "H2": "❌",
+            "I2": "274C"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 5,
+          "values": {
+            "A5": "Alienware 25 Gaming Monitor AW2518H",
+            "B5": "AW2518H",
+            "C5": 18,
+            "D5": "✔️",
+            "E5": "✔️",
+            "F5": "❌",
+            "G5": "V2",
+            "H5": "❌",
+            "I5": "✔️",
+            "J5": "❌",
+            "K5": "V5-6",
+            "L5": "274C"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen1 HID API length65, inferred wire payload64; no local capture",
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "274C"
+      ],
+      "zone_count": 1,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2518HF",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "official_no",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": null,
+      "support_status": "not_rgb_supported",
+      "hardware_tested_current_session": false,
+      "confidence": "historical",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!3:3"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!3:3"
+        },
+        {
+          "type": "dell_official",
+          "url": "https://www.dell.com/community/en/conversations/monitors/aw2518hf-fx-lighting-not-compatible/647f7dd6f4ccf8a8dec44a4a",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell moderator corrected product-page AlienFX claim; model lacks AlienFX."
+      ],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 3,
+          "values": {
+            "A3": "Alienware 25 Gaming Monitor AW2518Hf",
+            "B3": "❌"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 3,
+          "values": {
+            "A3": "Alienware 25 Gaming Monitor AW2518Hf",
+            "D3": "❌"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "unknown",
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/community/en/conversations/monitors/aw2518hf-fx-lighting-not-compatible/647f7dd6f4ccf8a8dec44a4a",
+      "historical_pid_claims": [],
+      "zone_count": 0,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2521H",
+      "vid": "0x187C",
+      "pid": "0x100A",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Stand",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 11,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!4:4"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!17:17"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2521H_1.0.0.0.json",
+          "sha256": "ff54b551966697faa4fe02361cc07b864382750accc511429bb46dbab7a5c1e1"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 20
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 4,
+          "values": {
+            "A4": "Alienware 25 Gaming Monitor AW2521H",
+            "B4": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 17,
+          "values": {
+            "A17": "Alienware 25 Gaming Monitor AW2521H",
+            "B17": "AW2521H",
+            "C17": 21,
+            "D17": "✔️",
+            "E17": "✔️",
+            "F17": "❌",
+            "G17": "V2",
+            "H17": "❌",
+            "I17": "✔️",
+            "J17": "❌",
+            "K17": "V5-6",
+            "L17": "100A"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 3,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "100A"
+      ],
+      "zone_count": 3,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2521HF",
+      "vid": "0x187C",
+      "pid": "0x1006",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Back",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 1,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!5:5"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!11:11"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2521HF_1.0.0.0.json",
+          "sha256": "73325e77355f7285f3e71104bd56c874458fa70710045356c7daae924a2158a7"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 16
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 5,
+          "values": {
+            "A5": "Alienware 25 Gaming Monitor AW2521HF",
+            "B5": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 11,
+          "values": {
+            "A11": "Alienware 25 Gaming Monitor AW2521HF",
+            "B11": "AW2521HF",
+            "C11": 21,
+            "D11": "✔️",
+            "E11": "✔️",
+            "F11": "❌",
+            "G11": "V2",
+            "H11": "❌",
+            "I11": "✔️",
+            "J11": "✔️",
+            "K11": "V5-6",
+            "L11": 1006,
+            "M11": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 1,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1006"
+      ],
+      "zone_count": 1,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2521HFA",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "official_yes",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": null,
+      "support_status": "rgb_confirmed_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "historical",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!6:6"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!12:12"
+        },
+        {
+          "type": "dell_official",
+          "url": "https://www.dell.com/en-ie/shop/alienware-25-gaming-monitor-aw2521hfa/apd/210-axro/monitors-monitor-accessories",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell specification lists AlienFX lighting. USB identity not verified."
+      ],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 6,
+          "values": {
+            "A6": "Alienware 25 Gaming Monitor AW2521HFA",
+            "B6": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 12,
+          "values": {
+            "A12": "Alienware 25 Gaming Monitor AW2521HFA",
+            "B12": "AW2521HFA",
+            "C12": 21,
+            "D12": "✔️",
+            "E12": "✔️",
+            "F12": "❌",
+            "G12": "V2",
+            "H12": "❌",
+            "I12": "✔️",
+            "J12": "✔️",
+            "K12": "V5-6",
+            "L12": 1006
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "unknown",
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/en-ie/shop/alienware-25-gaming-monitor-aw2521hfa/apd/210-axro/monitors-monitor-accessories",
+      "historical_pid_claims": [
+        "1006"
+      ],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2521HFL",
+      "vid": "0x187C",
+      "pid": "0x1007",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Back",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 1,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!7:7"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!13:13"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2521HFL_1.0.0.0.json",
+          "sha256": "bb8b75f978138f5f240a290490261f63525bde1f71f93b3c3374c01386b89216"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 17
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 7,
+          "values": {
+            "A7": "Alienware 25 Gaming Monitor AW2521HFL",
+            "B7": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 13,
+          "values": {
+            "A13": "Alienware 25 Gaming Monitor AW2521HFL",
+            "B13": "AW2521HFL",
+            "C13": 21,
+            "D13": "✔️",
+            "E13": "✔️",
+            "F13": "❌",
+            "G13": "V2",
+            "H13": "❌",
+            "I13": "✔️",
+            "J13": "❌",
+            "K13": "V5-6",
+            "L13": 1007,
+            "M13": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 1,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1007"
+      ],
+      "zone_count": 1,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2521HFLA",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "official_yes",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": null,
+      "support_status": "rgb_confirmed_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "historical",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!8:8"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!14:14"
+        },
+        {
+          "type": "dell_official",
+          "url": "https://www.dell.com/en-uk/shop/alienware-25-gaming-monitor-aw2521hfla/apd/210-axrp/monitors-monitor-accessories",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell specification lists AlienFX lighting. USB identity not verified."
+      ],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 8,
+          "values": {
+            "A8": "Alienware 25 Gaming Monitor AW2521HFLA",
+            "B8": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 14,
+          "values": {
+            "A14": "Alienware 25 Gaming Monitor AW2521HFLA",
+            "B14": "AW2521HFLA",
+            "C14": 21,
+            "D14": "✔️",
+            "E14": "✔️",
+            "F14": "❌",
+            "G14": "V2",
+            "H14": "❌",
+            "I14": "✔️",
+            "J14": "❌",
+            "K14": "V5-6",
+            "L14": 1007,
+            "M14": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "unknown",
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/en-uk/shop/alienware-25-gaming-monitor-aw2521hfla/apd/210-axrp/monitors-monitor-accessories",
+      "historical_pid_claims": [
+        "1007"
+      ],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2523HF",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "historical_no",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": null,
+      "support_status": "not_rgb_supported",
+      "hardware_tested_current_session": false,
+      "confidence": "historical",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!9:9"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!9:9"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 9,
+          "values": {
+            "A9": "Alienware 25 Gaming Monitor AW2523HF",
+            "B9": "❌"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 9,
+          "values": {
+            "A9": "Alienware 25 Gaming Monitor AW2523HF",
+            "D9": "❌"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "unknown",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 0,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2524H",
+      "vid": "0x187C",
+      "pid": "0x100F",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Number",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 11,
+      "report_length": 192,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!25:25"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!23:23"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2524H_1.0.0.0.json",
+          "sha256": "b11c44664d3e51cc8f5ef11465123694ea361af07a193358114f34b72e3a76fd"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 24
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 25,
+          "values": {
+            "A25": "Alienware 500Hz Gaming Monitor AW2524H",
+            "B25": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 23,
+          "values": {
+            "A23": "Alienware 500Hz Gaming Monitor AW2524H",
+            "B23": "AW2524H",
+            "C23": 24,
+            "D23": "✔️",
+            "E23": "✔️",
+            "F23": "❌",
+            "G23": "V2,5",
+            "H23": "✔️",
+            "I23": "🔄 (half)",
+            "J23": "❌ (only need OEM key index)",
+            "K23": "V5-6",
+            "L23": "100F"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "AWCC RTS5409S.cs parameter; physical wire verified only for captured models",
+      "metadata_lighting_led_count": 3,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "100F"
+      ],
+      "zone_count": 3,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2524HF",
+      "vid": "0x187C",
+      "pid": "0x1012",
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "no_lighting_in_awcc_metadata",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": null,
+      "support_status": "not_rgb_supported",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!26:26"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!26:26"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2524HF_1.0.0.0 .json",
+          "sha256": "2bd12ed3972e98741b6dea33199e9aad2857a61361d6709bd0a498aa1bf0e82f"
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [
+        "No explicit PID branch in current HIDDeviceFactory. Default fallback does not prove a controller."
+      ],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 26,
+          "values": {
+            "A26": "Alienware 500Hz Gaming Monitor AW2524HF",
+            "B26": "❌"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 26,
+          "values": {
+            "A26": "Alienware 500Hz Gaming Monitor AW2524HF",
+            "D26": "❌"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "unknown",
+      "metadata_lighting_led_count": 0,
+      "metadata_supported_interfaces": 4,
+      "metadata_animations": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "unknown",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 0,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2525HM",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://dl.dell.com/content/manual25876081-alienware-25-320hz-gaming-monitor-aw2525hm-user-s-guide.pdf?language=en-us",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Official manual confirms model. Generic AlienFX/AWCC text does not establish physical RGB zones."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://dl.dell.com/content/manual25876081-alienware-25-320hz-gaming-monitor-aw2525hm-user-s-guide.pdf?language=en-us",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2526HL",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell FAQ affected-products list confirms model only, not RGB capability."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2527HX",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://www.dell.com/ja-jp/blog/alienware-4k-560hz/",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell announcement 2026-09-02, release planned early2027. RGB capability and USB identity unknown."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/ja-jp/blog/alienware-4k-560hz/",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2720HF",
+      "vid": "0x187C",
+      "pid": "0x1005",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Back",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 1,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!13:13"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!6:6"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2720HF_1.0.0.0.json",
+          "sha256": "62f75c9445df3b84351fb7dbd85e231d98b12f5fead5f77315ff6a7dc3b5bfd8"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 15
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 13,
+          "values": {
+            "A13": "Alienware 27 Gaming Monitor AW2720HF",
+            "B13": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 6,
+          "values": {
+            "A6": "Alienware 27 Gaming Monitor AW2720HF ⚠️",
+            "B6": "AW2720HF",
+            "C6": 20,
+            "D6": "✔️",
+            "E6": "✔️",
+            "F6": "❌",
+            "G6": "V2",
+            "H6": "❌",
+            "I6": "✔️",
+            "J6": "❌",
+            "K6": "V5-6",
+            "L6": 1005
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 1,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1005"
+      ],
+      "zone_count": 1,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2720HFA",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "official_yes",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": null,
+      "support_status": "rgb_confirmed_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "historical",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!14:14"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!7:7"
+        },
+        {
+          "type": "dell_official",
+          "url": "https://www.dell.com/en-uk/shop/alienware-27-gaming-monitor-aw2720hfa/apd/210-axvy/monitors-monitor-accessories",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell specification lists AlienFX lighting. USB identity not verified."
+      ],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 14,
+          "values": {
+            "A14": "Alienware 27 Gaming Monitor AW2720HFA",
+            "B14": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 7,
+          "values": {
+            "A7": "Alienware 27 Gaming Monitor AW2720HFA ⚠️",
+            "B7": "AW2720HFA",
+            "C7": 20,
+            "D7": "✔️",
+            "E7": "✔️",
+            "F7": "❌",
+            "G7": "V2",
+            "H7": "❌",
+            "I7": "✔️",
+            "J7": "❌",
+            "K7": "V5-6",
+            "L7": 1005
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "unknown",
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/en-uk/shop/alienware-27-gaming-monitor-aw2720hfa/apd/210-axvy/monitors-monitor-accessories",
+      "historical_pid_claims": [
+        "1005"
+      ],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2721D",
+      "vid": "0x187C",
+      "pid": "0x1009",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Stand",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Downlight",
+          "mask": 4,
+          "mask_hex": "0x04",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 4,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 15,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!15:15"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!16:16"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2721D_1.0.0.0.json",
+          "sha256": "57bc77b2cbc80af947c4b925eace9d19c1340f2d76df879bd1780be53ef6630a"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 19
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 15,
+          "values": {
+            "A15": "Alienware 27 Gaming Monitor AW2721D",
+            "B15": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 16,
+          "values": {
+            "A16": "Alienware 27 Gaming Monitor AW2721D",
+            "B16": "AW2721D",
+            "C16": 21,
+            "D16": "✔️",
+            "E16": "✔️",
+            "F16": "❌",
+            "G16": "V2",
+            "H16": "❌",
+            "I16": "✔️",
+            "J16": "❌",
+            "K16": "V5-6",
+            "L16": 1009
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 4,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1009"
+      ],
+      "zone_count": 4,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2723DF",
+      "vid": "0x187C",
+      "pid": "0x100C",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Number",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 11,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!16:16"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!20:20"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2723DF_1.0.0.0.json",
+          "sha256": "65888826c5413b21eb1428212b569490612533768077546af3f23674cd288edb"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 22
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 16,
+          "values": {
+            "A16": "Alienware 27 Gaming Monitor AW2723DF",
+            "B16": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 20,
+          "values": {
+            "A20": "Alienware 27 Gaming Monitor AW2723DF",
+            "B20": "AW2723DF",
+            "C20": 23,
+            "D20": "✔️",
+            "E20": "✔️",
+            "F20": "❌",
+            "G20": "V2",
+            "H20": "❌",
+            "I20": "✔️",
+            "J20": "✔️",
+            "K20": "V5-6",
+            "L20": "100C",
+            "M20": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 3,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "100C"
+      ],
+      "zone_count": 3,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2724DM",
+      "vid": "0x187C",
+      "pid": "0x1010",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": true,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Number",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 11,
+      "report_length": 192,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "historical_capture_validated",
+      "hardware_tested_current_session": false,
+      "confidence": "captured_protocol",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!17:17"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!22:22"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2724DM_1.0.0.0.json",
+          "sha256": "e13747a9f28fda0a8ff67e077042a9e4b1829915e53a1eeae9cda3c107d31297"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 25
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 17,
+          "values": {
+            "A17": "Alienware 27 Gaming Monitor AW2724DM",
+            "B17": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 22,
+          "values": {
+            "A22": "Alienware 27 Gaming Monitor AW2724DM",
+            "B22": "AW2724DM",
+            "C22": 24,
+            "D22": "✔️",
+            "E22": "✔️",
+            "F22": "✔️",
+            "G22": "V2,5",
+            "H22": "✔️",
+            "I22": "🔄 (half)",
+            "J22": "✔️",
+            "K22": "V5-6",
+            "L22": 1010,
+            "M22": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [
+        {
+          "analysis": "local-source:AW2724DM-analysis.json",
+          "capture": "local-source:AW2724DM.pcapng",
+          "sha256": "4fd8a1043931c9267dc437a2726fda7bdf6652e5bfa11e0fd5f2aa7a872bec80",
+          "summary": {
+            "chains": 51,
+            "results": {
+              "matched": 51
+            },
+            "universal_matches": 0,
+            "color_commands": 51,
+            "full_ddc_checksum_matches": 51
+          }
+        },
+        {
+          "analysis": "local-source:AWFX-random-analysis.json",
+          "capture": "local-source:alienfx_AWFX_random_collors.pcapng",
+          "sha256": "6366b20e36b89a982e78d7464bcb9b25342bf4fa60becb7874e13dd98a3fe2d7",
+          "summary": {
+            "chains": 18,
+            "results": {
+              "matched": 18
+            },
+            "universal_matches": 0,
+            "color_commands": 18,
+            "full_ddc_checksum_matches": 18
+          }
+        },
+        {
+          "analysis": "local-source:brightness0-analysis.json",
+          "capture": "local-source:ALIENWARE_USBCAP_brightness0.pcapng",
+          "sha256": "223eb7f1f198d4790a39ce0526210cc8593758db845a36a027e7d50a66666281",
+          "summary": {
+            "chains": 27,
+            "results": {
+              "matched": 27
+            },
+            "universal_matches": 0,
+            "color_commands": 27,
+            "full_ddc_checksum_matches": 27
+          }
+        }
+      ],
+      "report_length_evidence": "USB capture",
+      "metadata_lighting_led_count": 3,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "enabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1010"
+      ],
+      "zone_count": 3,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2724HF",
+      "vid": "0x187C",
+      "pid": "0x1011",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "no_lighting_in_awcc_metadata",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "not_rgb_supported",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!18:18"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!18:18"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2724HF_1.0.0.0.json",
+          "sha256": "05ae816a03196d9c09f303978c36cef9f91d06e47fe39b15465abc4984a972d8"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 26
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 18,
+          "values": {
+            "A18": "Alienware 27 Gaming Monitor AW2724HF",
+            "B18": "❌"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 18,
+          "values": {
+            "A18": "Alienware 27 Gaming Monitor AW2724HF",
+            "D18": "❌"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "unknown",
+      "metadata_lighting_led_count": 0,
+      "metadata_supported_interfaces": 4,
+      "metadata_animations": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 0,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2725D",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Catalog entry. RGB zones reported in manual mirrors but primary RGB evidence not yet verified; no USB PID inference."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2725DF",
+      "vid": "0x187C",
+      "pid": "0x1014",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Number",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 11,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!10:10"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!25:25"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2725DF_1.0.0.0.json",
+          "sha256": "feab781b592341632b67356b4fc2dd76097e1dfa52ed42d0b833bc3ab756ac5d"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 28
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 10,
+          "values": {
+            "A10": "Alienware 27 360Hz QD OLED Gaming Monitor AW2725DF",
+            "B10": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 25,
+          "values": {
+            "A25": "Alienware 27 360Hz QD OLED Gaming Monitor AW2725DF",
+            "B25": "AW2725DF",
+            "C25": 25,
+            "D25": "✔️",
+            "E25": "🔄 (only enrypted one)",
+            "F25": "✔️",
+            "G25": "V2",
+            "H25": "❌",
+            "I25": "✔️",
+            "J25": "✔️",
+            "K25": "V6",
+            "L25": 1014,
+            "M25": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 3,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1014"
+      ],
+      "zone_count": 3,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2725DM",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://dl.dell.com/content/manual52095525-alienware-27-gaming-monitor-aw2725dm-user-s-guide.pdf?language=en-us",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Official manual confirms model. Generic AlienFX/AWCC text does not establish physical RGB zones."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://dl.dell.com/content/manual52095525-alienware-27-gaming-monitor-aw2725dm-user-s-guide.pdf?language=en-us",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2725Q",
+      "vid": "0x187C",
+      "pid": "0x1019",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": true,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 9,
+      "report_length": 192,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!12:12"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!27:27"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW2725Q_1.0.0.0.json",
+          "sha256": "390b20a048e1f25b2460d37a52b33226dd67ad0634256442f70b9ca0b62f824e"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 29
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 12,
+          "values": {
+            "A12": "Alienware 27 4K QD-OLED Gaming Monitor AW2725Q",
+            "B12": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 27,
+          "values": {
+            "A27": "Alienware 27 4K QD-OLED Gaming Monitor AW2725Q",
+            "B27": "AW2725Q",
+            "C27": 25,
+            "D27": "✔️",
+            "E27": "🔄 (only enrypted one)",
+            "F27": "❌",
+            "G27": "?",
+            "H27": "?",
+            "I27": "✔️",
+            "J27": "❌",
+            "K27": "V6",
+            "L27": "?"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "AWCC RTS5409S.cs parameter; physical wire verified only for captured models",
+      "metadata_lighting_led_count": 2,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue",
+        "Aurora"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "enabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 2,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW2725QF",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "official_yes",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "checksum": null,
+      "support_status": "rgb_confirmed_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "historical",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!11:11"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!28:28"
+        },
+        {
+          "type": "dell_official",
+          "url": "https://dl.dell.com/content/manual10676330-alienware-aw2725qf-monitor-user-s-guide.pdf?language=en-us",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell manual p.37 documents three AlienFX zones: Logo, Number, Power Button. USB PID/protocol not verified in installed AWCC."
+      ],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 11,
+          "values": {
+            "A11": "Alienware 27 4K Dual-Resolution Gaming Monitor AW2725QF",
+            "B11": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 28,
+          "values": {
+            "A28": "Alienware 27 4K Dual-Resolution Gaming Monitor AW2725QF",
+            "B28": "AW2725QF",
+            "C28": 25,
+            "D28": "✔️",
+            "E28": "🔄 (only enrypted one)",
+            "F28": "❌",
+            "G28": "?",
+            "H28": "?",
+            "I28": "✔️",
+            "J28": "❌",
+            "K28": "V6",
+            "L28": "?"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "hid_api_buffer_length": null,
+      "auth_status": "unknown",
+      "documented_zone_names": [
+        "Logo",
+        "Number",
+        "Power Button"
+      ],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://dl.dell.com/content/manual10676330-alienware-aw2725qf-monitor-user-s-guide.pdf?language=en-us",
+      "historical_pid_claims": [],
+      "zone_count": 3,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2726DL",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell FAQ affected-products list confirms model only, not RGB capability."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW2726DM",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell FAQ affected-products list confirms model only, not RGB capability."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW3225DM",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://dl.dell.com/content/manual55643468-alienware-32-gaming-monitor-aw3225dm-user-s-guide.pdf?language=en-us",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Official manual confirms model. Generic AlienFX/AWCC text does not establish physical RGB zones."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://dl.dell.com/content/manual55643468-alienware-32-gaming-monitor-aw3225dm-user-s-guide.pdf?language=en-us",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW3225QF",
+      "vid": "0x187C",
+      "pid": "0x1013",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Number",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 11,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!19:19"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!24:24"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3225QF_1.0.0.0.json",
+          "sha256": "e5174ae944135e1eb6431731e37dd48c9ada484875ac5fdc41a23f8e6df30143"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 27
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 19,
+          "values": {
+            "A19": "Alienware 32 4K QD OLED Gaming Monitor AW3225QF",
+            "B19": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 24,
+          "values": {
+            "A24": "Alienware 32 4K QD OLED Gaming Monitor AW3225QF",
+            "B24": "AW3225QF",
+            "C24": 25,
+            "D24": "✔️",
+            "E24": "🔄 (only enrypted one)",
+            "F24": "✔️",
+            "G24": "V2",
+            "H24": "❌",
+            "I24": "✔️",
+            "J24": "✔️",
+            "K24": "V6",
+            "L24": 1013,
+            "M24": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 3,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1013"
+      ],
+      "zone_count": 3,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3226DM",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell FAQ affected-products list confirms model only, not RGB capability."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW3226Q",
+      "sources": [
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3226Q_1.0.0.0.json",
+          "sha256": "71a2114ff85286407fe04302407a6652c35dddf128ea9a9800c098b68517f634"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 32
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "vid": "0x187C",
+      "pid": "0x1020",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 9,
+      "report_length": 192,
+      "report_length_evidence": "AWCC RTS5409S.cs parameter; physical wire verified only for captured models",
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "metadata_lighting_led_count": 2,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue",
+        "Aurora"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 2,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3418DW",
+      "vid": "0x0424",
+      "pid": "0x274A",
+      "controller": "legacy USB bridge (physical chip unverified)",
+      "protocol_family": "legacy_92_48",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "upstream_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Upper Left Backside",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        },
+        {
+          "id": 2,
+          "name": "Stand Backside",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        },
+        {
+          "id": 3,
+          "name": "Middle Bottom",
+          "mask": 4,
+          "mask_hex": "0x04",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        },
+        {
+          "id": 4,
+          "name": "Switch",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        }
+      ],
+      "zone_mask_all": 15,
+      "report_length": 64,
+      "checksum": "No checksum emitted in public Gen1 color command",
+      "support_status": "upstream_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "upstream_source",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!22:22"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!2:2"
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen1_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 22,
+          "values": {
+            "A22": "Alienware 34 Monitor AW3418DW",
+            "B22": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 2,
+          "values": {
+            "A2": "Alienware 34 Monitor AW3418DW",
+            "B2": "AW3418DW",
+            "C2": 18,
+            "D2": "✔️",
+            "E2": "✔️",
+            "F2": "❌",
+            "G2": "V2",
+            "H2": "❌",
+            "I2": "✔️",
+            "J2": "❌",
+            "K2": "V5-6",
+            "L2": "274A"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen1 HID API length65, inferred wire payload64; no local capture",
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "274A"
+      ],
+      "zone_count": 4,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3418HW",
+      "vid": "0x0424",
+      "pid": "0x274B",
+      "controller": "legacy USB bridge (physical chip unverified)",
+      "protocol_family": "legacy_92_48",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "upstream_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Upper Left Backside",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        },
+        {
+          "id": 2,
+          "name": "Stand Backside",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        },
+        {
+          "id": 3,
+          "name": "Middle Bottom",
+          "mask": 4,
+          "mask_hex": "0x04",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        },
+        {
+          "id": 4,
+          "name": "Switch",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "SignalRGB Gen1 PIDLibrary"
+        }
+      ],
+      "zone_mask_all": 15,
+      "report_length": 64,
+      "checksum": "No checksum emitted in public Gen1 color command",
+      "support_status": "upstream_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "upstream_source",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!23:23"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!4:4"
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen1_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 23,
+          "values": {
+            "A23": "Alienware 34 Monitor AW3418HW",
+            "B23": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 4,
+          "values": {
+            "A4": "Alienware 34 Monitor AW3418HW",
+            "B4": "AW3418HW",
+            "C4": 18,
+            "D4": "✔️",
+            "E4": "✔️",
+            "F4": "❌",
+            "G4": "V2",
+            "H4": "❌",
+            "I4": "✔️",
+            "J4": "✔️",
+            "K4": "V5-6",
+            "L4": "274B"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen1 HID API length65, inferred wire payload64; no local capture",
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "274B"
+      ],
+      "zone_count": 4,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3420DW",
+      "vid": "0x0424",
+      "pid": "0x2745",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Stand",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Downlight",
+          "mask": 4,
+          "mask_hex": "0x04",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 4,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 15,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!28:28"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!10:10"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3420DW_1.0.0.0.json",
+          "sha256": "a0f1bc73990fa4f45d33773cdcd66f20ce3d8d26035b8770fcb5d81a47372364"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 14
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 28,
+          "values": {
+            "A28": "Alienware AW3420DW",
+            "B28": "✔️",
+            "C28": "✔️",
+            "E28": "2,0 (unprotected)",
+            "H28": "❌"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 10,
+          "values": {
+            "A10": "Alienware AW3420DW",
+            "B10": "AW3420DW",
+            "C10": 20,
+            "D10": "✔️",
+            "E10": "✔️",
+            "F10": "❌",
+            "G10": "V2",
+            "H10": "❌",
+            "I10": "✔️",
+            "J10": "❌",
+            "K10": "V5-6",
+            "L10": 2745
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 4,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "2745"
+      ],
+      "zone_count": 4,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3423DW",
+      "vid": "0x187C",
+      "pid": "0x100B",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Stand",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Downlight",
+          "mask": 4,
+          "mask_hex": "0x04",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 4,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 15,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!20:20"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!19:19"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3423DW_1.0.0.0.json",
+          "sha256": "8b3f17700acca34b16239fdf35dadd80b0af794b21562eba90de5c809c382a7e"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 21
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 20,
+          "values": {
+            "A20": "Alienware 34 Curved OLED Monitor AW3423DW",
+            "B20": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 19,
+          "values": {
+            "A19": "Alienware 34 Curved OLED Monitor AW3423DW",
+            "B19": "AW3423DW",
+            "C19": 23,
+            "D19": "✔️",
+            "E19": "✔️",
+            "F19": "❌",
+            "G19": "V2",
+            "H19": "❌",
+            "I19": "✔️",
+            "J19": "✔️",
+            "K19": "V5-6",
+            "L19": "100B",
+            "M19": "✔️",
+            "N19": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 4,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Rainbow Cycle",
+        "Comet",
+        "Blink",
+        "Breathing RGB",
+        "Racing",
+        "Rainbow Spin",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "100B"
+      ],
+      "zone_count": 4,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3423DWF",
+      "vid": "0x187C",
+      "pid": "0x100E",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": true,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Number",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 11,
+      "report_length": 192,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "historical_capture_validated",
+      "hardware_tested_current_session": false,
+      "confidence": "captured_protocol",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!21:21"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!21:21"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3423DWF_1.0.0.0.json",
+          "sha256": "d623ca539be8c23664ad8acfe621665fa3a3bd1f61da0616bb495e1ff638bc4e"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 23
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 21,
+          "values": {
+            "A21": "Alienware 34 Curved QD OLED Gaming Monitor AW3423DWF",
+            "B21": "✔️",
+            "E21": "V2,5",
+            "F21": "✔️",
+            "G21": "🔄 (half)",
+            "H21": "✔️",
+            "I21": "100E"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 21,
+          "values": {
+            "A21": "Alienware 34 Curved QD OLED Gaming Monitor AW3423DWF",
+            "B21": "AW3423DWF",
+            "C21": 23,
+            "D21": "✔️",
+            "E21": "✔️",
+            "F21": "✔️",
+            "G21": "V2,5",
+            "H21": "✔️",
+            "I21": "🔄 (half)",
+            "J21": "✔️",
+            "K21": "V5-6",
+            "L21": "100E",
+            "M21": "✔️",
+            "N21": "✔️"
+          }
+        }
+      ],
+      "capture_fixtures": [
+        {
+          "analysis": "local-source:AW3423DWF-monitor-analysis.json",
+          "capture": "local-source:monitor aw3423dwf.pcapng",
+          "sha256": "b2b8a3635f043a0ec34ad7f71c4424ac45ca8ee328f10aa2a98927a332573f3d",
+          "summary": {
+            "chains": 57,
+            "results": {
+              "matched": 57
+            },
+            "universal_matches": 50,
+            "ddc_commands": 54,
+            "color_commands": 38,
+            "full_ddc_checksum_matches": 54,
+            "ddc_length_matches": 54,
+            "set_report_acknowledged_success": 164,
+            "mode_counts": {
+              "0x04": 38
+            }
+          }
+        }
+      ],
+      "report_length_evidence": "USB capture",
+      "metadata_lighting_led_count": 3,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "enabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "100E"
+      ],
+      "zone_count": 3,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3425DW",
+      "sources": [
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3425DW_1.0.0.0.json",
+          "sha256": "1ea1f770e09011cc451731ff4ded5b998dd944c771550cb3e018fb4a18088252"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 30
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "vid": "0x187C",
+      "pid": "0x101A",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": true,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 9,
+      "report_length": 192,
+      "report_length_evidence": "AWCC RTS5409S.cs parameter; physical wire verified only for captured models",
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "metadata_lighting_led_count": 2,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue",
+        "Aurora"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "enabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 2,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3425DWM",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://dl.dell.com/content/manual56823731-alienware-34-gaming-monitor-aw3425dwm-user-s-guide.pdf?language=en-us",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Official manual confirms model. Generic AlienFX/AWCC text does not establish physical RGB zones."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://dl.dell.com/content/manual56823731-alienware-34-gaming-monitor-aw3425dwm-user-s-guide.pdf?language=en-us",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW3426DW",
+      "sources": [
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3426DW_1.0.0.0.json",
+          "sha256": "119223268b989ec79af3ebec2112abe9e185df43f29b3fd912df5e1ef46dffd4"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 31
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [
+        "Initial and multicolor captures: 314 SignalRGB color outputs, valid checksums and USB ACK; user visually confirmed both zones.",
+        "Historical20ms SignalRGB scheduler:439 animated-validation commands +29 smoke-test commands, all checksums and USB ACK valid; global USB median45.914ms, per-zone approximately92ms. Later user feedback reported lag and delay. Current recommended interval100ms, optical validation pending. Earlier314-command baseline retained separately."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [
+        {
+          "analysis": "local-source:aw3426dw-analysis.json",
+          "capture": "local-source:aw3426dw-awcc.pcap",
+          "sha256": "0a8b37a962f3cc6b2dc319163231c153376f13976c4635270a0443a6d365ddf0",
+          "summary": {
+            "chains": 0,
+            "results": {},
+            "universal_matches": 0,
+            "ddc_commands": 18,
+            "color_commands": 18,
+            "full_ddc_checksum_matches": 18,
+            "ddc_length_matches": 18,
+            "set_report_acknowledged_success": 18,
+            "mode_counts": {
+              "0x04": 16,
+              "0x02": 2
+            }
+          }
+        },
+        {
+          "analysis": "local-source:signalrgb-live-analysis.json",
+          "capture": "local-source:signalrgb-initial.pcap",
+          "sha256": "b4dfcc8b28270d56901e84db1f1b819494294a9fa1eb24f9d0aa19458b711c56",
+          "summary": {
+            "chains": 0,
+            "results": {},
+            "universal_matches": 0,
+            "ddc_commands": 45,
+            "color_commands": 45,
+            "full_ddc_checksum_matches": 45,
+            "ddc_length_matches": 45,
+            "set_report_acknowledged_success": 45,
+            "mode_counts": {
+              "0x04": 45
+            }
+          }
+        },
+        {
+          "analysis": "local-source:signalrgb-colors-analysis.json",
+          "capture": "local-source:signalrgb-colors.pcap",
+          "sha256": "7e91d8e122edf12ca65601e5d30e9ca9cf1a179f6ccd73d74d322eb87122ce5b",
+          "summary": {
+            "chains": 0,
+            "results": {},
+            "universal_matches": 0,
+            "ddc_commands": 269,
+            "color_commands": 269,
+            "full_ddc_checksum_matches": 269,
+            "ddc_length_matches": 269,
+            "set_report_acknowledged_success": 269,
+            "mode_counts": {
+              "0x04": 269
+            }
+          }
+        }
+      ],
+      "vid": "0x187C",
+      "pid": "0x101D",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 9,
+      "report_length": 192,
+      "report_length_evidence": "USB capture",
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "signalrgb_hardware_tested",
+      "hardware_tested_current_session": true,
+      "confidence": "captured_protocol",
+      "metadata_lighting_led_count": 2,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue",
+        "Aurora"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 2,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ],
+      "performance": {
+        "configured_minimum_interval_ms": 100,
+        "configured_interval_mode": "Recommended; Custom can override this interval",
+        "historical_benchmark_minimum_interval_ms": 20,
+        "current_visual_validation": "pending",
+        "later_user_feedback": "Visible lag and delay during sustained use; recommended interval increased to100ms",
+        "final_animation_color_commands": 439,
+        "final_smoke_color_commands": 29,
+        "checksum_and_usb_ack_all_valid": true,
+        "usb_cadence_phases": [
+          {
+            "label": "global",
+            "mask": 9,
+            "commands": 209,
+            "median_interval_ms": 45.91405391693115,
+            "commands_per_second": 21.779823707338604
+          },
+          {
+            "label": "logo",
+            "mask": 1,
+            "commands": 110,
+            "median_interval_ms": 92.01502799987793,
+            "commands_per_second": 10.86778998753689
+          },
+          {
+            "label": "power",
+            "mask": 8,
+            "commands": 109,
+            "median_interval_ms": 92.55790710449219,
+            "commands_per_second": 10.804047231438169
+          }
+        ],
+        "sources": [
+          "validation/conservative-timing.json",
+          "validation/final-scheduler.json",
+          "validation/signalrgb-suite-final.json",
+          "docs/performances.md"
+        ],
+        "scope": "Historical SignalRGB benchmark on AW3426DW at20ms only; host USB cadence, not optical LED frame rate. Current100ms recommendation has no new optical validation. OpenRGB code delivery does not claim hardware validation."
+      }
+    },
+    {
+      "model": "AW3426DWM",
+      "vid": null,
+      "pid": null,
+      "controller": null,
+      "protocol_family": "unknown",
+      "auth": null,
+      "auth_status": "unknown",
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "unknown",
+      "zones": [],
+      "zone_mask_all": null,
+      "report_length": null,
+      "hid_api_buffer_length": null,
+      "report_length_evidence": "unknown",
+      "checksum": null,
+      "support_status": "catalog_protocol_unknown",
+      "hardware_tested_current_session": false,
+      "confidence": "catalog_only",
+      "sources": [
+        {
+          "type": "dell_official_catalog",
+          "url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+          "checked": "2026-09-19"
+        }
+      ],
+      "notes": [
+        "Dell FAQ affected-products list confirms model only, not RGB capability."
+      ],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "as_of": "2026-09-19",
+      "public_support_url": "https://www.dell.com/support/kbdoc/en-au/000131796/dell-gaming-monitor-frequently-asked-questions",
+      "historical_pid_claims": [],
+      "zone_count": null,
+      "code_delivered": "Non implémenté",
+      "implementations": [],
+      "implementation_evidence": []
+    },
+    {
+      "model": "AW3821DW",
+      "vid": "0x187C",
+      "pid": "0x1008",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Stand",
+          "mask": 2,
+          "mask_hex": "0x02",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 3,
+          "name": "Downlight",
+          "mask": 4,
+          "mask_hex": "0x04",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 4,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 15,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!24:24"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!15:15"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3821DW_1.0.0.0.json",
+          "sha256": "290b84cc0ff8e261079ca8f37e89e637fd0a21e1a27e6c35c77ebada08bbe233"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 18
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 24,
+          "values": {
+            "A24": "Alienware 38 Curved Gaming Monitor AW3821DW",
+            "B24": "✔️"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 15,
+          "values": {
+            "A15": "Alienware 38 Curved Gaming Monitor AW3821DW",
+            "B15": "AW3821DW",
+            "C15": 21,
+            "D15": "✔️",
+            "E15": "✔️",
+            "F15": "❌",
+            "G15": "V2",
+            "H15": "❌",
+            "I15": "✔️",
+            "J15": "✔️",
+            "K15": "V5-6",
+            "L15": 1008
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 4,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "1008"
+      ],
+      "zone_count": 4,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW3926QW",
+      "sources": [
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW3926QW_1.0.0.0.json",
+          "sha256": "17a9c4915b7e423a4c95b6e07090e19f859fc8f7fce15a21d503332e5756a300"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 33
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        }
+      ],
+      "notes": [],
+      "historical_records": [],
+      "capture_fixtures": [],
+      "vid": "0x187C",
+      "pid": "0x1021",
+      "controller": "RTS5409S",
+      "protocol_family": "realtek_hid_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Logo",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        },
+        {
+          "id": 2,
+          "name": "Power Button",
+          "mask": 8,
+          "mask_hex": "0x08",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 9,
+      "report_length": 192,
+      "report_length_evidence": "AWCC RTS5409S.cs parameter; physical wire verified only for captured models",
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "metadata_lighting_led_count": 2,
+      "metadata_supported_interfaces": 5,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue",
+        "Aurora"
+      ],
+      "hid_api_buffer_length": 193,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [],
+      "zone_count": 2,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    },
+    {
+      "model": "AW5520QF",
+      "vid": "0x0424",
+      "pid": "0x2741",
+      "controller": "MicroChip5734",
+      "protocol_family": "microchip_hid_i2c_ddc",
+      "auth": false,
+      "auth_scope": "OEM challenge-response E1",
+      "rgb_status": "awcc_declared",
+      "zones": [
+        {
+          "id": 1,
+          "name": "Back",
+          "mask": 1,
+          "mask_hex": "0x01",
+          "evidence": "AWCC metadata + AnimationBase.GetLightZoneBitmap"
+        }
+      ],
+      "zone_mask_all": 1,
+      "report_length": 64,
+      "checksum": "XOR(0x6E, all preceding DDC bytes)",
+      "support_status": "awcc_declared_not_hardware_tested",
+      "hardware_tested_current_session": false,
+      "confidence": "driver_static",
+      "sources": [
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste.xlsx",
+          "location": "Feuil1!27:27"
+        },
+        {
+          "type": "historical_workbook",
+          "path": "local-source:liste (version 1).xlsx",
+          "location": "Feuil1!8:8"
+        },
+        {
+          "type": "awcc_metadata",
+          "path": "local-source:AW5520QF_1.0.0.0.json",
+          "sha256": "0a04a7b8cfa67926bd023c4d41f562e212070cfa23ce14caa423a5338ffac038"
+        },
+        {
+          "type": "awcc_decompiled_factory",
+          "path": "local-source:HIDDeviceFactory.cs",
+          "line": 13
+        },
+        {
+          "type": "awcc_zone_mapping",
+          "path": "local-source:AnimationBase.cs",
+          "line": 36
+        },
+        {
+          "type": "signalrgb_public_source",
+          "path": "local-source:upstream-Alienware_Monitor_Gen2_Controller.js"
+        }
+      ],
+      "notes": [],
+      "historical_records": [
+        {
+          "source": "local-source:liste.xlsx",
+          "sheet": "Feuil1",
+          "row": 27,
+          "values": {
+            "A27": "Alienware 55 OLED Monitor AW5520QF",
+            "B27": "✔️",
+            "C27": "✔️",
+            "E27": "2,0 (unprotected)",
+            "H27": "❌"
+          }
+        },
+        {
+          "source": "local-source:liste (version 1).xlsx",
+          "sheet": "Feuil1",
+          "row": 8,
+          "values": {
+            "A8": "Alienware 55 OLED Monitor AW5520QF",
+            "B8": "AW5520QF",
+            "C8": 20,
+            "D8": "✔️",
+            "E8": "✔️",
+            "F8": "❌",
+            "G8": "V2",
+            "H8": "❌",
+            "I8": "✔️",
+            "J8": "❌",
+            "K8": "V5-6",
+            "L8": 2741
+          }
+        }
+      ],
+      "capture_fixtures": [],
+      "report_length_evidence": "SignalRGB Gen2 and OpenRGB AW3225QF HID65; common AWCC controller; not locally captured per model",
+      "metadata_lighting_led_count": 1,
+      "metadata_supported_interfaces": 1,
+      "metadata_animations": [
+        "Morph",
+        "Pulse",
+        "Color",
+        "Breathing",
+        "Spectrum",
+        "Static Default Blue"
+      ],
+      "hid_api_buffer_length": 65,
+      "auth_status": "disabled",
+      "as_of": "2026-09-19",
+      "public_support_url": null,
+      "historical_pid_claims": [
+        "2741"
+      ],
+      "zone_count": 1,
+      "code_delivered": "SignalRGB + OpenRGB",
+      "implementations": [
+        "SignalRGB",
+        "OpenRGB"
+      ],
+      "implementation_evidence": [
+        "signalrgb/profiles.json",
+        "openrgb/alienware-monitor-suite.patch"
+      ]
+    }
+  ]
+}

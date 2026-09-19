@@ -1,0 +1,43 @@
+﻿model,vid,pid,rgb_status,controller,protocol_family,auth,report_length,zone_count,zones,zone_mask_all,support_status,confidence,code_delivered
+AW2518H,0x0424,0x274C,upstream_declared,legacy USB bridge (physical chip unverified),legacy_92_48,False,64,1,Back Logo=0x01,1,upstream_declared_not_hardware_tested,upstream_source,SignalRGB + OpenRGB
+AW2518HF,,,official_no,,unknown,,,0,,,not_rgb_supported,historical,Non implémenté
+AW2521H,0x187C,0x100A,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,3,Logo=0x01; Stand=0x02; Power Button=0x08,11,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2521HF,0x187C,0x1006,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,1,Back=0x01,1,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2521HFA,,,official_yes,,unknown,,,,,,rgb_confirmed_protocol_unknown,historical,Non implémenté
+AW2521HFL,0x187C,0x1007,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,1,Back=0x01,1,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2521HFLA,,,official_yes,,unknown,,,,,,rgb_confirmed_protocol_unknown,historical,Non implémenté
+AW2523HF,,,historical_no,,unknown,,,0,,,not_rgb_supported,historical,Non implémenté
+AW2524H,0x187C,0x100F,awcc_declared,RTS5409S,realtek_hid_ddc,False,192,3,Logo=0x01; Number=0x02; Power Button=0x08,11,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2524HF,0x187C,0x1012,no_lighting_in_awcc_metadata,,unknown,,,0,,,not_rgb_supported,driver_static,Non implémenté
+AW2525HM,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW2526HL,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW2527HX,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW2720HF,0x187C,0x1005,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,1,Back=0x01,1,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2720HFA,,,official_yes,,unknown,,,,,,rgb_confirmed_protocol_unknown,historical,Non implémenté
+AW2721D,0x187C,0x1009,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,4,Logo=0x01; Stand=0x02; Downlight=0x04; Power Button=0x08,15,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2723DF,0x187C,0x100C,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,3,Logo=0x01; Number=0x02; Power Button=0x08,11,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2724DM,0x187C,0x1010,awcc_declared,RTS5409S,realtek_hid_ddc,True,192,3,Logo=0x01; Number=0x02; Power Button=0x08,11,historical_capture_validated,captured_protocol,SignalRGB + OpenRGB
+AW2724HF,0x187C,0x1011,no_lighting_in_awcc_metadata,MicroChip5734,microchip_hid_i2c_ddc,False,,0,,,not_rgb_supported,driver_static,Non implémenté
+AW2725D,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW2725DF,0x187C,0x1014,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,3,Logo=0x01; Number=0x02; Power Button=0x08,11,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2725DM,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW2725Q,0x187C,0x1019,awcc_declared,RTS5409S,realtek_hid_ddc,True,192,2,Logo=0x01; Power Button=0x08,9,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW2725QF,,,official_yes,,unknown,,,3,,,rgb_confirmed_protocol_unknown,historical,Non implémenté
+AW2726DL,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW2726DM,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW3225DM,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW3225QF,0x187C,0x1013,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,3,Logo=0x01; Number=0x02; Power Button=0x08,11,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW3226DM,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW3226Q,0x187C,0x1020,awcc_declared,RTS5409S,realtek_hid_ddc,False,192,2,Logo=0x01; Power Button=0x08,9,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW3418DW,0x0424,0x274A,upstream_declared,legacy USB bridge (physical chip unverified),legacy_92_48,False,64,4,Upper Left Backside=0x01; Stand Backside=0x02; Middle Bottom=0x04; Switch=0x08,15,upstream_declared_not_hardware_tested,upstream_source,SignalRGB + OpenRGB
+AW3418HW,0x0424,0x274B,upstream_declared,legacy USB bridge (physical chip unverified),legacy_92_48,False,64,4,Upper Left Backside=0x01; Stand Backside=0x02; Middle Bottom=0x04; Switch=0x08,15,upstream_declared_not_hardware_tested,upstream_source,SignalRGB + OpenRGB
+AW3420DW,0x0424,0x2745,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,4,Logo=0x01; Stand=0x02; Downlight=0x04; Power Button=0x08,15,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW3423DW,0x187C,0x100B,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,4,Logo=0x01; Stand=0x02; Downlight=0x04; Power Button=0x08,15,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW3423DWF,0x187C,0x100E,awcc_declared,RTS5409S,realtek_hid_ddc,True,192,3,Logo=0x01; Number=0x02; Power Button=0x08,11,historical_capture_validated,captured_protocol,SignalRGB + OpenRGB
+AW3425DW,0x187C,0x101A,awcc_declared,RTS5409S,realtek_hid_ddc,True,192,2,Logo=0x01; Power Button=0x08,9,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW3425DWM,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW3426DW,0x187C,0x101D,awcc_declared,RTS5409S,realtek_hid_ddc,False,192,2,Logo=0x01; Power Button=0x08,9,signalrgb_hardware_tested,captured_protocol,SignalRGB + OpenRGB
+AW3426DWM,,,unknown,,unknown,,,,,,catalog_protocol_unknown,catalog_only,Non implémenté
+AW3821DW,0x187C,0x1008,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,4,Logo=0x01; Stand=0x02; Downlight=0x04; Power Button=0x08,15,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW3926QW,0x187C,0x1021,awcc_declared,RTS5409S,realtek_hid_ddc,False,192,2,Logo=0x01; Power Button=0x08,9,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB
+AW5520QF,0x0424,0x2741,awcc_declared,MicroChip5734,microchip_hid_i2c_ddc,False,64,1,Back=0x01,1,awcc_declared_not_hardware_tested,driver_static,SignalRGB + OpenRGB

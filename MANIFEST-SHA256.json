@@ -1,0 +1,247 @@
+[
+  {
+    "path": ".gitattributes",
+    "bytes": 507,
+    "sha256": "26dfed2b3d3141bbde0612c893c94c75bf262f7d1543bf0cd6c9005497ccaf38"
+  },
+  {
+    "path": ".gitignore",
+    "bytes": 106,
+    "sha256": "3889ea9e3999afd755d78cd38b2313725867f5117b1d785c16c431484c09ea8b"
+  },
+  {
+    "path": "Alienware-RGB-Moniteurs.xlsx",
+    "bytes": 21106,
+    "sha256": "8747b0f2429a4a910d57c458fe94e3c70dbdd471bc18cb8b6bbcd8d64175f21f"
+  },
+  {
+    "path": "NOTICE.md",
+    "bytes": 1283,
+    "sha256": "9e063914314ee6d589e29d53e8736ae13c39bb269e15c57040f509ee94ac1826"
+  },
+  {
+    "path": "README.md",
+    "bytes": 3336,
+    "sha256": "cb9c14bd71d133b51fe31dfcaab3a4b6cf900a66de0770515c893fb0d62f01a1"
+  },
+  {
+    "path": "docs/README.md",
+    "bytes": 3200,
+    "sha256": "27f87b7746015c35059d418cd676a8a1efeb1e0359129568592548c31f8b066a"
+  },
+  {
+    "path": "docs/historique.md",
+    "bytes": 12423,
+    "sha256": "e0afde5c9409f402484ac55acccd292c2ca467f4c502b1c8697d1e406109743b"
+  },
+  {
+    "path": "docs/outils-et-methode.md",
+    "bytes": 10110,
+    "sha256": "35ffc54dfc1c1ebee77b34e09d6fe341a6fa18e467377a654b1bce78da1ff37e"
+  },
+  {
+    "path": "docs/performances.md",
+    "bytes": 8495,
+    "sha256": "6d711944bd60542b5cc27cc1b348a50d1b60f5186618234904a28fb370913bc8"
+  },
+  {
+    "path": "docs/protocoles.md",
+    "bytes": 13074,
+    "sha256": "b34dc16a81cd694f3ffbbaca756865a69d900d3088e0e9dbf6bfc98682654a60"
+  },
+  {
+    "path": "docs/sources.md",
+    "bytes": 4516,
+    "sha256": "cdd434faad7d3c3d91eb906695cea27a00253349017d6973833673cbd22d936f"
+  },
+  {
+    "path": "docs/support.md",
+    "bytes": 7472,
+    "sha256": "ab90dc283ec04df8abda023c335cac0e34f4d9db64536153c949836f89d9c8f9"
+  },
+  {
+    "path": "models.csv",
+    "bytes": 6378,
+    "sha256": "35fa126f8ba75474ddf3dd912d4c8b11c5da765dd5dc62592d74e7d76bbfe71f"
+  },
+  {
+    "path": "models.json",
+    "bytes": 117815,
+    "sha256": "9f6d27927052c47f600c5fb9acfb67b09fa2ee612673271cf9e074ecdeb08165"
+  },
+  {
+    "path": "openrgb/README.md",
+    "bytes": 6066,
+    "sha256": "790040c8fafa16a0bd9c8781282db927524407efefc3f799a686f7bae6621a1b"
+  },
+  {
+    "path": "openrgb/alienware-monitor-suite.patch",
+    "bytes": 131975,
+    "sha256": "acb8f03e23eb0245abd8a5db6b681432805edeb9a01f736609dbf8cf9c979d81"
+  },
+  {
+    "path": "openrgb/deleted-files.txt",
+    "bytes": 515,
+    "sha256": "2e23d3a176400aae3b72ca2e4da6ead0ab022a89d52dd59302ff2fde3c8db5ed"
+  },
+  {
+    "path": "openrgb/files/Controllers/AlienwareMonitorController/AlienwareMonitorController/AlienwareMonitorController.cpp",
+    "bytes": 5393,
+    "sha256": "be73fabe3c08d9f9f202ff5a6c47be0cdaf58bdfa26cc88c3e970e6a49d0e2d4"
+  },
+  {
+    "path": "openrgb/files/Controllers/AlienwareMonitorController/AlienwareMonitorController/AlienwareMonitorController.h",
+    "bytes": 1171,
+    "sha256": "2d79fe785ff7d8ee9ab587790356b88b8f16c257850f6ea14133af03f2610bd5"
+  },
+  {
+    "path": "openrgb/files/Controllers/AlienwareMonitorController/AlienwareMonitorController/AlienwareMonitorControllerDetect.cpp",
+    "bytes": 3748,
+    "sha256": "0b292856efeb5f4e8bd9918dadb6ad12a8d7b905fddf917a551bc14c4aaf19aa"
+  },
+  {
+    "path": "openrgb/files/Controllers/AlienwareMonitorController/AlienwareMonitorController/AlienwareMonitorProfiles.cpp",
+    "bytes": 3837,
+    "sha256": "f7fb56f89d6e4f742bc05fc9f93a24bd09bb32dc216002137e77c8f9af483d1a"
+  },
+  {
+    "path": "openrgb/files/Controllers/AlienwareMonitorController/AlienwareMonitorController/AlienwareMonitorProtocol.h",
+    "bytes": 4433,
+    "sha256": "a9150f867870c1b5e1dd3ad9dcc2732f69e07be9d5f37536894d73e2efb0442a"
+  },
+  {
+    "path": "openrgb/files/Controllers/AlienwareMonitorController/AlienwareMonitorController/RGBController_AlienwareMonitor.cpp",
+    "bytes": 3708,
+    "sha256": "9960102d3d9e6d57f32a734616da5fd5c02bb37cbfec7e70d14afd8f8c6b92a2"
+  },
+  {
+    "path": "openrgb/files/tests/alienware-monitor/.gitignore",
+    "bytes": 8,
+    "sha256": "020c2606e8ed484089c2083e0be438b9d0736bee1558a6b76af0d58bd23f69cf"
+  },
+  {
+    "path": "openrgb/files/tests/alienware-monitor/README.md",
+    "bytes": 3362,
+    "sha256": "b363cb9d34bacae194646d5bbc5602050ba3745190f779dee9583ad4c827b491"
+  },
+  {
+    "path": "openrgb/files/tests/alienware-monitor/extract_fixtures.py",
+    "bytes": 2615,
+    "sha256": "a14b648872b9b1fc865d2e8783e028e1f8b58efae56d2e9ff7e9f337eabedb26"
+  },
+  {
+    "path": "openrgb/files/tests/alienware-monitor/fixtures.json",
+    "bytes": 59753,
+    "sha256": "73ee7c055a01dd271b081929d3d71143c450e120d57663dd02cb79f295c2a2d3"
+  },
+  {
+    "path": "openrgb/files/tests/alienware-monitor/generate_profiles.py",
+    "bytes": 3550,
+    "sha256": "d157b03ef0df7c1f9b03a1a162983c7e5829074ad4e3c92e18acd24e06b1cef0"
+  },
+  {
+    "path": "openrgb/files/tests/alienware-monitor/run.py",
+    "bytes": 1484,
+    "sha256": "ab542ca3365470a8f367ec20ef99a66b01e6a2c638853a6152f8ddf7a47d0da7"
+  },
+  {
+    "path": "openrgb/files/tests/alienware-monitor/test.cpp",
+    "bytes": 8894,
+    "sha256": "7835c2ec678ca6139c198fb37817ee724b97c442707c3609ac2cc53e32f1d6d8"
+  },
+  {
+    "path": "outils/analyze_alienware_pcap.py",
+    "bytes": 16491,
+    "sha256": "5f8b928576553ea93093c35e1d65c85f29cd28288271d7b2f12fb029703dcceb"
+  },
+  {
+    "path": "outils/build-signalrgb.cjs",
+    "bytes": 2566,
+    "sha256": "cccbfebec74efac3297e0da46c5aab7cd11b33d038c5dcf755d42c8994ac627c"
+  },
+  {
+    "path": "outils/controller-template.js",
+    "bytes": 11854,
+    "sha256": "af9d2255e0fe535be4a06eef570d2cc0fb98038e68bee82e2b3d79523631674f"
+  },
+  {
+    "path": "signalrgb/Alienware_Monitor_Gen1_Controller.js",
+    "bytes": 14584,
+    "sha256": "264588468e015a3c95b61ae8ff5ece2db61c847877449081d72390ca1dece2b2"
+  },
+  {
+    "path": "signalrgb/Alienware_Monitor_Gen2_Controller.js",
+    "bytes": 17008,
+    "sha256": "6c28f14dd2022dfab7aeb56a7736fe6ac93409e93e8720548f772a5c5a9cf672"
+  },
+  {
+    "path": "signalrgb/Alienware_Monitor_Gen3_Controller.js",
+    "bytes": 15687,
+    "sha256": "e957dba7a7d13ac166aef18802634fa563dda6956062e907a495545081dff250"
+  },
+  {
+    "path": "signalrgb/README.md",
+    "bytes": 4784,
+    "sha256": "51c13e948c93c7625991d0ed9c6e2d43285f820f0fb69d8595cb35345f0ed09d"
+  },
+  {
+    "path": "signalrgb/alienware-monitors.patch",
+    "bytes": 75969,
+    "sha256": "408efb0abb64dfb5213f892a57a3230efb185d730b312e6e434a262cdd27aa35"
+  },
+  {
+    "path": "signalrgb/profiles.json",
+    "bytes": 5222,
+    "sha256": "e94248578473ef4a5a1d135be810a8cb1de58bf7238ac4e32b362f6d536e5872"
+  },
+  {
+    "path": "signalrgb/tests/fixtures.json",
+    "bytes": 35592,
+    "sha256": "89ac9270825016c1f314640e48a27b969fcfe5bb5a2d57e823b0831fb91273d1"
+  },
+  {
+    "path": "signalrgb/tests/results.json",
+    "bytes": 1699,
+    "sha256": "b97a6d71909a31eeda3bd1de1d6eac61b552beea18bd5bf7734c29ee449ff483"
+  },
+  {
+    "path": "signalrgb/tests/test-plugins.cjs",
+    "bytes": 7122,
+    "sha256": "e235735cd35b8d4e1a2190f4d8de8ac152db4cf41635ac320754cfaf0cf48db0"
+  },
+  {
+    "path": "validation/conservative-timing.json",
+    "bytes": 445,
+    "sha256": "25e18a6a42695094e75affb675b9850c55627d5f3dcb3a8f4dc50a79656272b4"
+  },
+  {
+    "path": "validation/final-scheduler.json",
+    "bytes": 1029,
+    "sha256": "5967b1b15a4e98e4686bfc21980d39bb01d42830e4da6ab0971531d8dbe3c26a"
+  },
+  {
+    "path": "validation/performance.json",
+    "bytes": 2603,
+    "sha256": "0b8ec280f5cbf6390ed19d811b66176091bd5e81a1d261cfa4ec2cd0a921ede1"
+  },
+  {
+    "path": "validation/publication-audit.json",
+    "bytes": 658,
+    "sha256": "260bf1fd1d08f1a8ea2da8a5e9c8e68f7e1ab1011753061d288ab7650237b163"
+  },
+  {
+    "path": "validation/publication-tests.json",
+    "bytes": 1449,
+    "sha256": "b093f4e8aa09115bcbd832fc8ee9092b2472c1a13d0c6d5ba16facbb871cdc67"
+  },
+  {
+    "path": "validation/usb-summary.json",
+    "bytes": 1091,
+    "sha256": "f3232398361da8dbbe8fef7d3efd51d5338069a55cabd2cd66feaeb27a6f04ef"
+  },
+  {
+    "path": "validation/workbook-publication.json",
+    "bytes": 288,
+    "sha256": "0db4c9f138ab7ef9b732cf663c324fbcab48241a3366e7a5509cf8889d1aaf8e"
+  }
+]

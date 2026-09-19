@@ -1,0 +1,16 @@
+# Preserve canonical bytes for the new generated deliverables and hashes.
+/README.md text eol=lf
+/NOTICE.md text eol=lf
+/.gitignore text eol=lf
+/.gitattributes text eol=lf
+/MANIFEST-SHA256.json text eol=lf
+/models.json text eol=lf
+/models.csv text eol=lf
+/docs/** text eol=lf
+/outils/** text eol=lf
+/signalrgb/** text eol=lf
+/openrgb/** text eol=lf
+/validation/** text eol=lf
+*.xlsx binary
+# A unified diff needs its blank context-line prefix; do not trim that space.
+*.patch -text whitespace=-blank-at-eol

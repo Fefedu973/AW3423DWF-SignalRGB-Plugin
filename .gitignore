@@ -1,0 +1,12 @@
+archives-local/
+node_modules/
+__pycache__/
+*.pyc
+**/build/
+*.pcap
+*.pcapng
+*.dll
+*.exe
+*.bak
+*.zip
+.venv/

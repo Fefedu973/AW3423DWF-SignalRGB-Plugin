@@ -1,0 +1,116 @@
+{
+  "capture_sha256": "1229eec5f876c327a877c30905f301d3f89f2666695f33237a9d051ec0dcd6b8",
+  "summary": {
+    "chains": 0,
+    "results": {},
+    "universal_matches": 0,
+    "ddc_commands": 1453,
+    "color_commands": 1453,
+    "full_ddc_checksum_matches": 1453,
+    "ddc_length_matches": 1453,
+    "set_report_acknowledged_success": 1453,
+    "mode_counts": {
+      "0x04": 1453
+    }
+  },
+  "phases": [
+    {
+      "phase": 0,
+      "pause_ms": 200,
+      "mode": "global",
+      "commands": 41,
+      "zones": [
+        {
+          "mask": "0x9",
+          "commands": 41,
+          "median_interval_ms": 249.17197227478027,
+          "commands_per_second": 4.013292469737433
+        }
+      ]
+    },
+    {
+      "phase": 1,
+      "pause_ms": 100,
+      "mode": "global",
+      "commands": 70,
+      "zones": [
+        {
+          "mask": "0x9",
+          "commands": 70,
+          "median_interval_ms": 140.84100723266602,
+          "commands_per_second": 7.100204831310412
+        }
+      ]
+    },
+    {
+      "phase": 2,
+      "pause_ms": 50,
+      "mode": "global",
+      "commands": 107,
+      "zones": [
+        {
+          "mask": "0x9",
+          "commands": 107,
+          "median_interval_ms": 93.73748302459717,
+          "commands_per_second": 10.668091010482916
+        }
+      ]
+    },
+    {
+      "phase": 3,
+      "pause_ms": 20,
+      "mode": "global",
+      "commands": 159,
+      "zones": [
+        {
+          "mask": "0x9",
+          "commands": 159,
+          "median_interval_ms": 62.53361701965332,
+          "commands_per_second": 15.991398669386355
+        }
+      ]
+    },
+    {
+      "phase": 4,
+      "pause_ms": 0,
+      "mode": "global",
+      "commands": 215,
+      "zones": [
+        {
+          "mask": "0x9",
+          "commands": 215,
+          "median_interval_ms": 46.74851894378662,
+          "commands_per_second": 21.391052007497034
+        }
+      ]
+    },
+    {
+      "phase": 5,
+      "pause_ms": 20,
+      "mode": "individual",
+      "commands": 192,
+      "zones": [
+        {
+          "mask": "0x1",
+          "commands": 96,
+          "median_interval_ms": 93.30296516418457,
+          "commands_per_second": 10.717772990818748
+        },
+        {
+          "mask": "0x8",
+          "commands": 96,
+          "median_interval_ms": 93.2469367980957,
+          "commands_per_second": 10.72421287323641
+        }
+      ]
+    },
+    {
+      "phase": 6,
+      "pause_ms": 0,
+      "mode": "individual",
+      "commands": 0,
+      "zones": []
+    }
+  ],
+  "interpretation": "USB command cadence, not an optical measurement. Phase encoded by red channel."
+}

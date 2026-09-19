@@ -1,0 +1,10 @@
+{
+  "changed_utc": "2026-09-19T16:25:11.564501+00:00",
+  "model": "AW3426DW",
+  "minimum_interval_before_ms": 20,
+  "minimum_interval_after_ms": 100,
+  "reason": "Later user observation: lag and visible delay during sustained use",
+  "visual_validation": "pending",
+  "queue": "No plugin frame queue; sampling occurs only at each permitted send",
+  "interval_mode": "100ms is Recommended; Custom overrides with an explicit value from0to500ms"
+}

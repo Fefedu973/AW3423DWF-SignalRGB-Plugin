@@ -1,0 +1,40 @@
+{
+  "summary": {
+    "chains": 0,
+    "results": {},
+    "universal_matches": 0,
+    "ddc_commands": 439,
+    "color_commands": 439,
+    "full_ddc_checksum_matches": 439,
+    "ddc_length_matches": 439,
+    "set_report_acknowledged_success": 439,
+    "mode_counts": {
+      "0x04": 439
+    }
+  },
+  "phases": [
+    {
+      "label": "global",
+      "mask": 9,
+      "commands": 209,
+      "median_interval_ms": 45.91405391693115,
+      "commands_per_second": 21.779823707338604
+    },
+    {
+      "label": "logo",
+      "mask": 1,
+      "commands": 110,
+      "median_interval_ms": 92.01502799987793,
+      "commands_per_second": 10.86778998753689
+    },
+    {
+      "label": "power",
+      "mask": 8,
+      "commands": 109,
+      "median_interval_ms": 92.55790710449219,
+      "commands_per_second": 10.804047231438169
+    }
+  ],
+  "capture_sha256": "4b94903ba17160f3c1e0339a9f01a1c6b71566bdc963cf884dfbeea45d1ac649",
+  "limitation": "Host USB cadence, not optical LED frame rate. User confirmed smooth stable first benchmark."
+}

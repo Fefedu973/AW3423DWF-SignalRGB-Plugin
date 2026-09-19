@@ -1,0 +1,36 @@
+{
+  "signalrgb-suite-final.json": {
+    "capture_sha256": "78f04c5e8e10cf889e02de2080f495f8f01c2566da78d1864e7976c0fb4a458f",
+    "summary": {
+      "chains": 0,
+      "results": {},
+      "universal_matches": 0,
+      "ddc_commands": 29,
+      "color_commands": 29,
+      "full_ddc_checksum_matches": 29,
+      "ddc_length_matches": 29,
+      "set_report_acknowledged_success": 29,
+      "mode_counts": {
+        "0x04": 29
+      }
+    },
+    "scope": "USB command/checksum/ack validation; raw capture excluded from public repository"
+  },
+  "signalrgb-suite-animation.json": {
+    "capture_sha256": "4b94903ba17160f3c1e0339a9f01a1c6b71566bdc963cf884dfbeea45d1ac649",
+    "summary": {
+      "chains": 0,
+      "results": {},
+      "universal_matches": 0,
+      "ddc_commands": 439,
+      "color_commands": 439,
+      "full_ddc_checksum_matches": 439,
+      "ddc_length_matches": 439,
+      "set_report_acknowledged_success": 439,
+      "mode_counts": {
+        "0x04": 439
+      }
+    },
+    "scope": "USB command/checksum/ack validation; raw capture excluded from public repository"
+  }
+}

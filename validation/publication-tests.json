@@ -1,0 +1,38 @@
+{
+  "date": "2026-09-19",
+  "repository_base": "ee524b53856991d3c31718981e42a079c910f4a9",
+  "signalrgb": {
+    "command": "node signalrgb/tests/test-plugins.cjs",
+    "passed": 34,
+    "profiles": 23,
+    "authentication_fixtures": 146,
+    "full_wire_fixtures": 16,
+    "hardware_io": false
+  },
+  "openrgb": {
+    "base": "cd44e41d462629410a806119694a773e88449ce1",
+    "patch_apply_check": "passed",
+    "applied_diff_check": "passed",
+    "command_in_patched_checkout": "python tests/alienware-monitor/run.py",
+    "color_reports": 44,
+    "authentication_pairs": 101,
+    "controller_and_profiles_compilation": "passed",
+    "wrapper_and_detector_syntax_compilation": "passed against upstream headers",
+    "error_and_per_device_isolation_tests": "passed",
+    "full_qt_gui_build": false,
+    "hardware_io": false
+  },
+  "analyzer": {
+    "command": "python outils/analyze_alienware_pcap.py capture.pcap --output analysis.json",
+    "test_capture_sha256": "0a8b37a962f3cc6b2dc319163231c153376f13976c4635270a0443a6d365ddf0",
+    "ddc_commands": 18,
+    "checksums_valid": 18,
+    "lengths_valid": 18,
+    "usb_acks_valid": 18,
+    "fixed_color_commands": 16,
+    "pulse_commands": 2,
+    "authentication_exchanges": 0,
+    "raw_capture_published": false
+  },
+  "scope": "Offline source validation during publication preparation. Hardware results remain the dated observations in the documentation; no new hardware action was performed here."
+}

@@ -1,0 +1,213 @@
+{
+  "generated": "2026-09-19",
+  "source": "../models.json",
+  "profiles": [
+    {
+      "model": "AW2518H",
+      "vid": "0x0424",
+      "pid": "0x274C",
+      "plugin": "Alienware_Monitor_Gen1_Controller.js",
+      "protocol": "legacy",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3418DW",
+      "vid": "0x0424",
+      "pid": "0x274A",
+      "plugin": "Alienware_Monitor_Gen1_Controller.js",
+      "protocol": "legacy",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3418HW",
+      "vid": "0x0424",
+      "pid": "0x274B",
+      "plugin": "Alienware_Monitor_Gen1_Controller.js",
+      "protocol": "legacy",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3420DW",
+      "vid": "0x0424",
+      "pid": "0x2745",
+      "plugin": "Alienware_Monitor_Gen1_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW5520QF",
+      "vid": "0x0424",
+      "pid": "0x2741",
+      "plugin": "Alienware_Monitor_Gen1_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2521H",
+      "vid": "0x187C",
+      "pid": "0x100A",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2521HF",
+      "vid": "0x187C",
+      "pid": "0x1006",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2521HFL",
+      "vid": "0x187C",
+      "pid": "0x1007",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2720HF",
+      "vid": "0x187C",
+      "pid": "0x1005",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2721D",
+      "vid": "0x187C",
+      "pid": "0x1009",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2723DF",
+      "vid": "0x187C",
+      "pid": "0x100C",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2725DF",
+      "vid": "0x187C",
+      "pid": "0x1014",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3225QF",
+      "vid": "0x187C",
+      "pid": "0x1013",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3423DW",
+      "vid": "0x187C",
+      "pid": "0x100B",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3821DW",
+      "vid": "0x187C",
+      "pid": "0x1008",
+      "plugin": "Alienware_Monitor_Gen2_Controller.js",
+      "protocol": "microchip",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2524H",
+      "vid": "0x187C",
+      "pid": "0x100F",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2724DM",
+      "vid": "0x187C",
+      "pid": "0x1010",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": true,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW2725Q",
+      "vid": "0x187C",
+      "pid": "0x1019",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": true,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3226Q",
+      "vid": "0x187C",
+      "pid": "0x1020",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": false,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3423DWF",
+      "vid": "0x187C",
+      "pid": "0x100E",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": true,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3425DW",
+      "vid": "0x187C",
+      "pid": "0x101A",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": true,
+      "hardware_tested": false
+    },
+    {
+      "model": "AW3426DW",
+      "vid": "0x187C",
+      "pid": "0x101D",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": false,
+      "hardware_tested": true
+    },
+    {
+      "model": "AW3926QW",
+      "vid": "0x187C",
+      "pid": "0x1021",
+      "plugin": "Alienware_Monitor_Gen3_Controller.js",
+      "protocol": "realtek",
+      "auth": false,
+      "hardware_tested": false
+    }
+  ]
+}

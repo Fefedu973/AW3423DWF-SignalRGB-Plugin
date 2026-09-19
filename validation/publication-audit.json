@@ -1,0 +1,19 @@
+{
+  "date": "2026-09-19",
+  "new_or_existing_files_checked": 55,
+  "private_path_or_credential_patterns": 0,
+  "broken_local_markdown_links": 0,
+  "original_code_files_unchanged": true,
+  "generated_signalrgb_matches_local_delivery": true,
+  "excluded": [
+    "private archives",
+    "raw USB captures",
+    "Discord raw messages and attachments",
+    "proprietary DLLs",
+    "decompiled source files",
+    "full historical 14-key catalogue",
+    "machine-specific configuration"
+  ],
+  "included_protocol_constants": 5,
+  "constant_provenance": "Generic AWCC protocol constants; first two also in historical public plugins; not user/account credentials."
+}
